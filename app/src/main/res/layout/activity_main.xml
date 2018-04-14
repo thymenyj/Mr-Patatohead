@@ -4,16 +4,252 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
 
-    <TextView
-        android:id="@+id/sample_text"
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/gridLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        app:layout_constraintVertical_bias="0.857">
+
+        <CheckBox
+            android:id="@+id/checkArms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkClicked"
+            android:text="@string/arms"
+            android:visibility="visible"
+            app:layout_column="1"
+            app:layout_row="1"
+            tools:layout_editor_absoluteX="95dp"
+            tools:layout_editor_absoluteY="408dp" />
+
+        <CheckBox
+            android:id="@+id/checkEars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ears"
+            android:visibility="visible"
+            app:layout_column="1"
+            app:layout_row="0"
+            tools:layout_editor_absoluteX="95dp"
+            tools:layout_editor_absoluteY="454dp" />
+
+        <CheckBox
+            android:id="@+id/checkEyes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eyes"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="221dp"
+            tools:layout_editor_absoluteY="360dp" />
+
+        <CheckBox
+            android:id="@+id/checkEyebrows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eyebrows"
+            android:visibility="visible"
+            app:layout_column="2"
+            app:layout_row="1"
+            tools:layout_editor_absoluteX="95dp"
+            tools:layout_editor_absoluteY="360dp" />
+
+        <CheckBox
+            android:id="@+id/checkGlasses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/glasses"
+            android:visibility="visible"
+            app:layout_column="1"
+            app:layout_row="2"
+            tools:layout_editor_absoluteX="221dp"
+            tools:layout_editor_absoluteY="539dp" />
+
+        <CheckBox
+            android:id="@+id/checkHat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hat"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="221dp"
+            tools:layout_editor_absoluteY="495dp" />
+
+        <CheckBox
+            android:id="@+id/checkMouth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mouth"
+            android:visibility="visible"
+            app:layout_column="1"
+            app:layout_row="3"
+            tools:layout_editor_absoluteX="95dp"
+            tools:layout_editor_absoluteY="539dp" />
+
+        <CheckBox
+            android:id="@+id/checkMustache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mustache"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="221dp"
+            tools:layout_editor_absoluteY="454dp" />
+
+        <CheckBox
+            android:id="@+id/checkNose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Nose"
+            android:visibility="visible"
+            app:layout_column="1"
+            app:layout_row="4"
+            tools:layout_editor_absoluteX="95dp"
+            tools:layout_editor_absoluteY="495dp" />
+
+        <CheckBox
+            android:id="@+id/checkShoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Shoes"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="221dp"
+            tools:layout_editor_absoluteY="408dp" />
+    </android.support.v7.widget.GridLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/body"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:contentDescription="Body"
+            android:visibility="visible"
+            app:srcCompat="@drawable/body"
+            tools:layout_editor_absoluteX="52dp"
+            tools:layout_editor_absoluteY="8dp" />
+
+        <ImageView
+            android:id="@+id/arms"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:contentDescription="@string/arms"
+            android:visibility="visible"
+            app:srcCompat="@drawable/arms"
+            tools:layout_editor_absoluteX="54dp"
+            tools:layout_editor_absoluteY="8dp" />
+
+        <ImageView
+            android:id="@+id/ears"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:contentDescription="@string/ears"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ears"
+            tools:layout_editor_absoluteX="52dp"
+            tools:layout_editor_absoluteY="8dp" />
+
+        <ImageView
+            android:id="@+id/eyes"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:contentDescription="@string/eyes"
+            android:visibility="visible"
+            app:srcCompat="@drawable/eyes"
+            tools:layout_editor_absoluteX="56dp"
+            tools:layout_editor_absoluteY="8dp" />
+
+        <ImageView
+            android:id="@+id/eyebrows"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:contentDescription="@string/eyebrows"
+            android:visibility="visible"
+            app:srcCompat="@drawable/eyebrows"
+            tools:layout_editor_absoluteX="56dp"
+            tools:layout_editor_absoluteY="8dp" />
+
+        <ImageView
+            android:id="@+id/glasses"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:contentDescription="@string/glasses"
+            android:visibility="visible"
+            app:srcCompat="@drawable/glasses"
+            tools:layout_editor_absoluteX="56dp"
+            tools:layout_editor_absoluteY="8dp" />
+
+        <ImageView
+            android:id="@+id/hat"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:contentDescription="@string/hat"
+            android:visibility="visible"
+            app:srcCompat="@drawable/hat"
+            tools:layout_editor_absoluteX="56dp"
+            tools:layout_editor_absoluteY="8dp" />
+
+        <ImageView
+            android:id="@+id/mouth"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:contentDescription="@string/mouth"
+            android:visibility="visible"
+            app:srcCompat="@drawable/mouth"
+            tools:layout_editor_absoluteX="56dp"
+            tools:layout_editor_absoluteY="8dp" />
+
+        <ImageView
+            android:id="@+id/mustache"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:contentDescription="@string/mustache"
+            android:visibility="visible"
+            app:srcCompat="@drawable/mustache"
+            tools:layout_editor_absoluteX="56dp"
+            tools:layout_editor_absoluteY="8dp" />
+
+        <ImageView
+            android:id="@+id/nose"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:contentDescription="@string/Nose"
+            android:visibility="visible"
+            app:srcCompat="@drawable/nose"
+            tools:layout_editor_absoluteX="56dp"
+            tools:layout_editor_absoluteY="8dp" />
+
+        <ImageView
+            android:id="@+id/shoes"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:contentDescription="@string/Shoes"
+            android:visibility="visible"
+            app:srcCompat="@drawable/shoes"
+            tools:layout_editor_absoluteX="56dp"
+            tools:layout_editor_absoluteY="8dp" />
+    </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>
